@@ -8,7 +8,6 @@ public class Enemy : MonoBehaviour
     public float maxHp;
     public float currentHp;
 
-
     void Start()
     {
         currentHp = maxHp;
