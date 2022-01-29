@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0ef893d7126d7347a05e9666345c928, type: 3}
+  m_Name: so_CoinList
+  m_EditorClassIdentifier: 
+  coinDetails:
+  - coinID: 1000
+    side1Element: 0
+    side1Value: 1
+    side1Sprite: {fileID: -2413806693520163455, guid: 638f0fd75d0ba6248a606bc7c9794f34, type: 3}
+    side2Element: 1
+    side2Value: 1
+    side2Sprite: {fileID: -2413806693520163455, guid: dea9aa5e00595584b858fd82b16bb035, type: 3}
+  - coinID: 1001
+    side1Element: 0
+    side1Value: 0
+    side1Sprite: {fileID: 0}
+    side2Element: 0
+    side2Value: 0
+    side2Sprite: {fileID: 0}
+  - coinID: 1002
+    side1Element: 0
+    side1Value: 0
+    side1Sprite: {fileID: 0}
+    side2Element: 0
+    side2Value: 0
+    side2Sprite: {fileID: 0}
+  - coinID: 1003
+    side1Element: 0
+    side1Value: 0
+    side1Sprite: {fileID: 0}
+    side2Element: 0
+    side2Value: 0
+    side2Sprite: {fileID: 0}
+  - coinID: 1004
+    side1Element: 0
+    side1Value: 0
+    side1Sprite: {fileID: 0}
+    side2Element: 0
+    side2Value: 0
+    side2Sprite: {fileID: 0}
+  - coinID: 1005
+    side1Element: 0
+    side1Value: 0
+    side1Sprite: {fileID: 0}
+    side2Element: 0
+    side2Value: 0
+    side2Sprite: {fileID: 0}
+  - coinID: 1006
+    side1Element: 0
+    side1Value: 0
+    side1Sprite: {fileID: 0}
+    side2Element: 0
+    side2Value: 0
+    side2Sprite: {fileID: 0}
+  - coinID: 1007
+    side1Element: 0
+    side1Value: 0
+    side1Sprite: {fileID: 0}
+    side2Element: 0
+    side2Value: 0
+    side2Sprite: {fileID: 0}
+  - coinID: 1008
+    side1Element: 0
+    side1Value: 0
+    side1Sprite: {fileID: 0}
+    side2Element: 0
+    side2Value: 0
+    side2Sprite: {fileID: 0}
+  - coinID: 1009
+    side1Element: 0
+    side1Value: 0
+    side1Sprite: {fileID: 0}
+    side2Element: 0
+    side2Value: 0
+    side2Sprite: {fileID: 0}
