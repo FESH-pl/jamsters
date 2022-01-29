@@ -9,7 +9,7 @@ public class TestDrawHand : MonoBehaviour
     // public List<Transform> handSlots;  
 
     private bool done = false;
-    public CoinManager manager;
+    //public CoinManager manager;
 
     void Start(){
         // coins = new List<GameObject>();
@@ -32,7 +32,8 @@ public class TestDrawHand : MonoBehaviour
     void Update(){
         if(!done){
             done = true;
-            manager.DrawHand();
+            CoinManager.Instance.DrawHand();
+            //CoinManager.Instance.DiscardHand();
         }
     }
 }

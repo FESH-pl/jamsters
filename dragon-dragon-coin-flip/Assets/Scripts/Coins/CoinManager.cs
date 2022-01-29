@@ -80,4 +80,18 @@ public class CoinManager : MonoBehaviour
 
         }
     }
+
+    //call when turn ends to discard remaining coins in hand
+    public void DiscardHand(){
+
+        Transform coin;
+
+        foreach(Transform handSlot in handSlots){
+            if(handSlot.childCount != 0){
+                coin = handSlot.GetChild(0);
+                discard.Add(coin);
+                coin.SetParent(null);
+            }
+        }
+    }
 }
