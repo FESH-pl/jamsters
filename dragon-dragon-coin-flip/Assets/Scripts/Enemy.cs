@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
     public HealthBarController healthbar;
     public float maxHp;
@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     {
         currentHp = maxHp;
     }
+
 
     void Update()
     {
