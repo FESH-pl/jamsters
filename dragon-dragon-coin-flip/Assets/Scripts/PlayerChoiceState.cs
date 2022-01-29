@@ -21,8 +21,4 @@ public class PlayerChoiceState : State
         stateMachine.playerChoiceCanvasGroup.interactable = false;
         stateMachine.playerChoiceCanvasGroup.blocksRaycasts = false;
     }
-    //public void OnEndTurnButtonPress()
-    //{
-    //    stateMachine.ChangeState(stateMachine.applyDamageState);
-    //}
 }

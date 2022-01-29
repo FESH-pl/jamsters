@@ -7,6 +7,6 @@ public class EndTurnButtonController : MonoBehaviour
     public StateMachine stateMachine;
     public void OnEndTurnButtonPress()
     {
-        stateMachine.ChangeState(stateMachine.applyDamageState);
+        stateMachine.ChangeState(stateMachine.enemyTurnState);
     }
 }
