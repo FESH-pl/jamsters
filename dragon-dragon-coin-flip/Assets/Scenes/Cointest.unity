@@ -250,6 +250,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 098e618bc3fb9f542811da9b2786148a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startingPool:
+  - {fileID: 4216670715167556929, guid: f74c24b8335553d4c8e8e29c482a537e, type: 3}
+  - {fileID: 4648727262841767872, guid: e6429bc1297a9174a8562728d897a4e3, type: 3}
+  - {fileID: 4648727262841767872, guid: e6429bc1297a9174a8562728d897a4e3, type: 3}
+  - {fileID: 3580158180672228340, guid: 485ce72d1364aa248bf7eaf7f0c95db9, type: 3}
+  - {fileID: 3580158180672228340, guid: 485ce72d1364aa248bf7eaf7f0c95db9, type: 3}
+  - {fileID: 2925904244177998393, guid: d9dd6de991921d042b4ab8b19e0ce7db, type: 3}
+  - {fileID: 4451872904035620539, guid: 704716e97c0d90545b5714c57c432904, type: 3}
+  - {fileID: 9119336368522855890, guid: c0b3650c33c8187479f3e59e5fcfc793, type: 3}
+  - {fileID: 4218614840488877705, guid: 94b851670cd07a649844715b53108893, type: 3}
+  - {fileID: 3294170067807542179, guid: ce34f96b10beb0c4499fc308d4322452, type: 3}
+  - {fileID: 2685069110359091761, guid: ecc5401366113e545bd4bc4dcb574a6c, type: 3}
+  - {fileID: 1475951789903043043, guid: e4b8c4f25469a5249bf0306eba237e38, type: 3}
+  handSlots:
+  - {fileID: 2073630558}
+  - {fileID: 451952419}
+  - {fileID: 1717049983}
+  - {fileID: 857522807}
+  - {fileID: 1668881279}
   coinList: {fileID: 11400000, guid: 2bdd766e0704d9946a67b4be86b9bb59, type: 2}
 --- !u!114 &395674648
 MonoBehaviour:
@@ -263,13 +282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1039be6c216c3848b3ad775dec0ea19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPrefab: {fileID: 7679219889857083318, guid: 805935e59f22ab14e99e554b10675436, type: 3}
-  handSlots:
-  - {fileID: 2073630558}
-  - {fileID: 451952419}
-  - {fileID: 1717049983}
-  - {fileID: 857522807}
-  - {fileID: 1668881279}
+  manager: {fileID: 395674647}
 --- !u!1 &451952418
 GameObject:
   m_ObjectHideFlags: 0
