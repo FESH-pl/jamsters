@@ -12,6 +12,9 @@ public class StartTurnState : State
     {
         base.Enter();
         startTime = Time.time;
+        //stateMachine.startTurnCanvasGroup.alpha = 1;
+        //stateMachine.startTurnCanvasGroup.interactable = true;
+        //stateMachine.startTurnCanvasGroup.blocksRaycasts = true;
     }
     public override void UpdateLogic()
     {
@@ -22,5 +25,13 @@ public class StartTurnState : State
 
         // wait 3 seconds, then change states
         if (elapsedTime > 3f) stateMachine.ChangeState(stateMachine.playerChoiceState);
+    }
+
+    public override void Exit()
+    {
+        base.Exit();
+        //stateMachine.startTurnCanvasGroup.alpha = 0;
+        //stateMachine.startTurnCanvasGroup.interactable = false;
+        //stateMachine.startTurnCanvasGroup.blocksRaycasts = false;
     }
 }
