@@ -20,6 +20,7 @@ public class ApplyDamageState : State
     {
         base.UpdateLogic();
         // TODO: animation or wait
+        stateMachine.ChangeState(stateMachine.playerChoiceState);
     }
 
     public override void Exit()
