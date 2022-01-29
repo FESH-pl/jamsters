@@ -5,6 +5,8 @@ using UnityEngine;
 public class StateMachine : MonoBehaviour
 {
     public State currentState;
+    public Player player;
+    public Enemy enemy;
 
     [HideInInspector]
     public StartTurnState startTurnState;
@@ -60,11 +62,13 @@ public class StateMachine : MonoBehaviour
             currentState.UpdatePhysics();
     }
 
-    public void ChangeState(State newState)
+    public void ChangeState(State newState, int? damage = null)
     {
+        Debug.Log($"StateMachine ChangeState damage={damage}");
         currentState.Exit();
         currentState = newState;
-        currentState.Enter();
+        if (damage == null) currentState.Enter();
+        else currentState.Enter((int)damage);
     }
 
     // TODO: remove (for debugging)

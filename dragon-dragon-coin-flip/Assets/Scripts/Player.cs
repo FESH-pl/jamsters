@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public StateMachine stateMachine;
     public HealthBarController healthbar;
     public float maxHp;
     public float currentHp;
@@ -17,5 +18,14 @@ public class Player : MonoBehaviour
     void Update()
     {
         healthbar.SetHealth(currentHp, maxHp);
+    }
+
+    public void OnDamageReceived(int damage)
+    {
+        Debug.Log($"Player OnDamageReceived damage={damage}");
+        currentHp -= damage;
+
+        if (currentHp <= 0)
+            stateMachine.ChangeState(stateMachine.loseState);
     }
 }

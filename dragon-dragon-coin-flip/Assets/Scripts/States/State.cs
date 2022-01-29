@@ -14,6 +14,7 @@ public class State
     }
 
     public virtual void Enter() { }
+    public virtual void Enter(int damage) { }
     public virtual void HandleInput() { }
     public virtual void UpdateLogic() { }
     public virtual void UpdatePhysics() { }
