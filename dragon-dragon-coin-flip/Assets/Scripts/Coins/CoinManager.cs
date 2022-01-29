@@ -66,19 +66,21 @@ public class CoinManager : MonoBehaviour
         foreach(Transform handSlot in handSlots){
             
             if(pool.Count == 0){
-                foreach(Transform coin in discard){
-                    pool.Add(coin);
-                    discard.Remove(coin);
+                while(discard.Count > 0){
+                    pool.Add(discard[0]);
+                    discard.RemoveAt(0);
                 }
             }
-
+            
             int randomCardPosition = Random.Range(0,pool.Count);
 
             pool[randomCardPosition].SetParent(handSlot,false);
+            pool[randomCardPosition].position = pool[randomCardPosition].parent.position;
             pool[randomCardPosition].GetComponent<Coin>().flip();
             pool.RemoveAt(randomCardPosition);
 
         }
+        PrintStatus();
     }
 
     //call when turn ends to discard remaining coins in hand
@@ -89,9 +91,32 @@ public class CoinManager : MonoBehaviour
         foreach(Transform handSlot in handSlots){
             if(handSlot.childCount != 0){
                 coin = handSlot.GetChild(0);
-                discard.Add(coin);
+                if(coin.GetComponent<Coin>().sideUp == 1 && GetCoinDetails(coin.GetComponent<Coin>().coinID).side1Element == Element.smoke){
+                    exhaust.Add(coin);
+                    //Debug.Log("Dissolve");
+                } else if(coin.GetComponent<Coin>().sideUp == 2 && GetCoinDetails(coin.GetComponent<Coin>().coinID).side2Element == Element.smoke){
+                    exhaust.Add(coin);
+                    //Debug.Log("Dissolve");
+                } else {
+                    discard.Add(coin);
+                    //Debug.Log("Discard");      
+                }
+                
                 coin.SetParent(null);
             }
         }
+    }
+
+    public void DiscardCoin(Transform coin){
+        coin.SetParent(null);
+        discard.Add(coin);
+        PrintStatus();
+    }
+
+    private void PrintStatus(){
+        Debug.Log("Coins in pool: " + pool.Count);
+        Debug.Log("Coins in discard: " + discard.Count);
+        Debug.Log("Coins in exhaust: " + exhaust.Count);
+        Debug.Log("****************************************");
     }
 }

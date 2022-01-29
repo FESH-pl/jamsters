@@ -16,70 +16,70 @@ MonoBehaviour:
   - coinID: 1000
     side1Element: 0
     side1Value: 2
-    side1Sprite: {fileID: -2413806693520163455, guid: 638f0fd75d0ba6248a606bc7c9794f34, type: 3}
+    side1Sprite: {fileID: 21300000, guid: 0e78c8d9765d07b46b52f1694152b311, type: 3}
     side2Element: 4
     side2Value: 1
-    side2Sprite: {fileID: -2413806693520163455, guid: 80fb62cbe504ed94a9904113b03f22d8, type: 3}
+    side2Sprite: {fileID: 21300000, guid: cbc2ee4925ce86b4c93ffea7ef08d383, type: 3}
   - coinID: 1001
     side1Element: 0
     side1Value: 1
-    side1Sprite: {fileID: -2413806693520163455, guid: 638f0fd75d0ba6248a606bc7c9794f34, type: 3}
+    side1Sprite: {fileID: 21300000, guid: f61f74a4cdd4ff74ca86ff2ba33a9366, type: 3}
     side2Element: 1
     side2Value: 1
-    side2Sprite: {fileID: -2413806693520163455, guid: dea9aa5e00595584b858fd82b16bb035, type: 3}
+    side2Sprite: {fileID: 21300000, guid: 97f908acfd17d6a468ec0fed6f5557c2, type: 3}
   - coinID: 1002
     side1Element: 0
     side1Value: 1
-    side1Sprite: {fileID: -2413806693520163455, guid: 638f0fd75d0ba6248a606bc7c9794f34, type: 3}
+    side1Sprite: {fileID: 21300000, guid: f61f74a4cdd4ff74ca86ff2ba33a9366, type: 3}
     side2Element: 2
     side2Value: 1
-    side2Sprite: {fileID: -2413806693520163455, guid: 502905e5416d7694584e283a456e0dab, type: 3}
+    side2Sprite: {fileID: 21300000, guid: 1dec61411e9df58498bac2889d168be2, type: 3}
   - coinID: 1003
     side1Element: 2
     side1Value: 1
-    side1Sprite: {fileID: -2413806693520163455, guid: 502905e5416d7694584e283a456e0dab, type: 3}
+    side1Sprite: {fileID: 21300000, guid: 1dec61411e9df58498bac2889d168be2, type: 3}
     side2Element: 4
     side2Value: 0
-    side2Sprite: {fileID: -2413806693520163455, guid: 80fb62cbe504ed94a9904113b03f22d8, type: 3}
+    side2Sprite: {fileID: 21300000, guid: cbc2ee4925ce86b4c93ffea7ef08d383, type: 3}
   - coinID: 1004
     side1Element: 1
     side1Value: 1
-    side1Sprite: {fileID: -2413806693520163455, guid: dea9aa5e00595584b858fd82b16bb035, type: 3}
+    side1Sprite: {fileID: 21300000, guid: 97f908acfd17d6a468ec0fed6f5557c2, type: 3}
     side2Element: 4
     side2Value: 0
-    side2Sprite: {fileID: -2413806693520163455, guid: 80fb62cbe504ed94a9904113b03f22d8, type: 3}
+    side2Sprite: {fileID: 21300000, guid: cbc2ee4925ce86b4c93ffea7ef08d383, type: 3}
   - coinID: 1005
     side1Element: 1
     side1Value: 1
-    side1Sprite: {fileID: -2413806693520163455, guid: dea9aa5e00595584b858fd82b16bb035, type: 3}
+    side1Sprite: {fileID: 21300000, guid: 97f908acfd17d6a468ec0fed6f5557c2, type: 3}
     side2Element: 2
     side2Value: 1
-    side2Sprite: {fileID: -2413806693520163455, guid: 502905e5416d7694584e283a456e0dab, type: 3}
+    side2Sprite: {fileID: 21300000, guid: 1dec61411e9df58498bac2889d168be2, type: 3}
   - coinID: 1006
     side1Element: 1
     side1Value: 2
-    side1Sprite: {fileID: -2413806693520163455, guid: dea9aa5e00595584b858fd82b16bb035, type: 3}
+    side1Sprite: {fileID: 21300000, guid: 4a030e52120fbef4299266e8fc41d491, type: 3}
     side2Element: 2
     side2Value: 2
-    side2Sprite: {fileID: -2413806693520163455, guid: 502905e5416d7694584e283a456e0dab, type: 3}
+    side2Sprite: {fileID: 21300000, guid: 81e57286e1c245e408b2c706c15b15e4, type: 3}
   - coinID: 1007
     side1Element: 0
     side1Value: 3
-    side1Sprite: {fileID: -2413806693520163455, guid: 638f0fd75d0ba6248a606bc7c9794f34, type: 3}
+    side1Sprite: {fileID: 21300000, guid: fe235caaff8ecdc489667053674f11c4, type: 3}
     side2Element: 3
     side2Value: 0
-    side2Sprite: {fileID: -2413806693520163455, guid: 79076d997b209db40a677239a92b99c2, type: 3}
+    side2Sprite: {fileID: 21300000, guid: a67968130ad173542a2406f5a9fa3f4e, type: 3}
   - coinID: 1008
     side1Element: 1
     side1Value: 2
-    side1Sprite: {fileID: -2413806693520163455, guid: dea9aa5e00595584b858fd82b16bb035, type: 3}
+    side1Sprite: {fileID: 21300000, guid: 4a030e52120fbef4299266e8fc41d491, type: 3}
     side2Element: 3
     side2Value: 0
-    side2Sprite: {fileID: -2413806693520163455, guid: 79076d997b209db40a677239a92b99c2, type: 3}
+    side2Sprite: {fileID: 21300000, guid: a67968130ad173542a2406f5a9fa3f4e, type: 3}
   - coinID: 1009
     side1Element: 2
     side1Value: 2
-    side1Sprite: {fileID: -2413806693520163455, guid: 502905e5416d7694584e283a456e0dab, type: 3}
+    side1Sprite: {fileID: 21300000, guid: 81e57286e1c245e408b2c706c15b15e4, type: 3}
     side2Element: 3
     side2Value: 0
-    side2Sprite: {fileID: -2413806693520163455, guid: 79076d997b209db40a677239a92b99c2, type: 3}
+    side2Sprite: {fileID: 21300000, guid: a67968130ad173542a2406f5a9fa3f4e, type: 3}
