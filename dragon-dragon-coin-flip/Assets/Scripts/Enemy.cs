@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public StateMachine stateMachine;
     public HealthBarController healthbar;
     public float maxHp;
     public float currentHp;
@@ -17,5 +18,12 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         healthbar.SetHealth(currentHp, maxHp);
+    }
+
+    public void OnDamageReceived(int damage)
+    {
+        currentHp -= damage;
+        if (currentHp <= 0)
+            stateMachine.ChangeState(stateMachine.victoryState);
     }
 }
