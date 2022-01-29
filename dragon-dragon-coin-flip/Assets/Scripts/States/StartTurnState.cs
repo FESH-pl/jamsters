@@ -23,8 +23,8 @@ public class StartTurnState : State
         // TODO: update with correct logic
         var elapsedTime = Time.time - startTime;
 
-        // wait 3 seconds, then change states
-        if (elapsedTime > 3f) stateMachine.ChangeState(stateMachine.playerChoiceState);
+        // wait 1 second, then change states
+        if (elapsedTime > 1f) stateMachine.ChangeState(stateMachine.playerChoiceState);
     }
 
     public override void Exit()
