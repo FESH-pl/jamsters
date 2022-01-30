@@ -35,7 +35,7 @@ public class EnemyTurnState : State
 
         // TODO: refine length
         var elapsedTime = Time.time - startTime;
-        if (elapsedTime > 1f) stateMachine.ChangeState(stateMachine.playerChoiceState);
+        if (elapsedTime > 1f) stateMachine.ChangeState(stateMachine.startTurnState);
 
     }
 
