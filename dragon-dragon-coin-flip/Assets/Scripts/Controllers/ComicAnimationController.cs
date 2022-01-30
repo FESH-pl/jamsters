@@ -20,7 +20,7 @@ public class ComicAnimationController : MonoBehaviour
     {
         var timeSinceLastFrame = Time.time - previousFrameTime;
         
-        if(timeSinceLastFrame > 1)
+        if(timeSinceLastFrame > 1.5)
         {
             if (currentFrameIndex < maxFrameIndex)
                 ShowNextFrame(currentFrameIndex + 1);
