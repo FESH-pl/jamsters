@@ -16,15 +16,17 @@ public class ApplyDamageState : State
         startTime = Time.time;
 
         // TODO: add check for heal ability (negative damage)
-        stateMachine.enemy.OnDamageReceived(damage);
+        
 
         if(damage > 0)
         {
             isHealing = false;
+            stateMachine.enemy.OnDamageReceived(damage);
         }
         else
         {
             isHealing = true;
+            stateMachine.player.OnDamageReceived(damage);
         }
 
         enemyHealthBar = stateMachine.enemy.gameObject.transform.parent.GetChild(1).gameObject;
@@ -35,7 +37,8 @@ public class ApplyDamageState : State
     {
         base.UpdateLogic();
 
-        ShakeHealthBar();
+        if(!isHealing)
+            ShakeHealthBar();
         MovePlayer();
 
         var elapsedTime = Time.time - startTime;
