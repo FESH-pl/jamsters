@@ -43,12 +43,13 @@ public class Enemy : MonoBehaviour
         currentHp -= damage;
         if (currentHp <= 0)
             stateMachine.ChangeState(stateMachine.victoryState);
+        if (currentHp > maxHp) currentHp = maxHp;
     }
 
     public void SetNewEnemyAbility()
     {
+        if (abilities == null) return;
         var randomAbilityIndex = Random.Range(0, 3);
         currentAbility = abilities[randomAbilityIndex];
-        Debug.Log(currentAbility.name);
     }
 }

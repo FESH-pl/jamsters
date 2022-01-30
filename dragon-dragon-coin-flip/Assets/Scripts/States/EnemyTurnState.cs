@@ -15,7 +15,10 @@ public class EnemyTurnState : State
         base.Enter();
         startTime = Time.time;
 
-        stateMachine.player.OnDamageReceived(damage);
+        if (damage > 0)
+            stateMachine.player.OnDamageReceived(damage);
+        else
+            stateMachine.enemy.OnDamageReceived(damage);
 
         playerHealthBar = stateMachine.player.gameObject.transform.parent.GetChild(2).gameObject;        
         initialEnemyPos = stateMachine.enemy.gameObject.transform.position;

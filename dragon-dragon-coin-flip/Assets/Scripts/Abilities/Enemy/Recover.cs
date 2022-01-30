@@ -8,7 +8,7 @@ public class Recover : EnemyAbility
     {
         name = "Recover";
         description = "Recover 10 health";
-        damage = 0;
+        damage = -10;
         heal = 10;
     }
 }
