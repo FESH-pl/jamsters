@@ -8,6 +8,7 @@ public class EnemyTurnState : State
     private GameObject playerHealthBar;
     private Vector3 initialEnemyPos;
     private float startTime;
+    private bool isHealing;
     public EnemyTurnState(StateMachine stateMachine) : base("EnemyTurnState", stateMachine) { }
 
     public override void Enter(int damage)
@@ -16,9 +17,15 @@ public class EnemyTurnState : State
         startTime = Time.time;
 
         if (damage > 0)
+        {
             stateMachine.player.OnDamageReceived(damage);
+            isHealing = false;
+        }
         else
+        {
             stateMachine.enemy.OnDamageReceived(damage);
+            isHealing = true;
+        }
 
         playerHealthBar = stateMachine.player.gameObject.transform.parent.GetChild(2).gameObject;        
         initialEnemyPos = stateMachine.enemy.gameObject.transform.position;
@@ -30,9 +37,10 @@ public class EnemyTurnState : State
     public override void UpdateLogic()
     {
         base.UpdateLogic();
-        
 
-        ShakeHealthBar();
+        if (!isHealing)
+            ShakeHealthBar();
+
         MoveEnemy();
 
 

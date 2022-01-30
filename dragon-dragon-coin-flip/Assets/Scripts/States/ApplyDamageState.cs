@@ -7,6 +7,7 @@ public class ApplyDamageState : State
     private GameObject enemyHealthBar;
     private Vector3 initialPlayerPos;
     private float startTime;
+    private bool isHealing;
     public ApplyDamageState(StateMachine stateMachine) : base("ApplyDamageState", stateMachine) { }
 
     public override void Enter(int damage)
@@ -16,6 +17,15 @@ public class ApplyDamageState : State
 
         // TODO: add check for heal ability (negative damage)
         stateMachine.enemy.OnDamageReceived(damage);
+
+        if(damage > 0)
+        {
+            isHealing = false;
+        }
+        else
+        {
+            isHealing = true;
+        }
 
         enemyHealthBar = stateMachine.enemy.gameObject.transform.parent.GetChild(1).gameObject;
         initialPlayerPos = stateMachine.player.gameObject.transform.position;
