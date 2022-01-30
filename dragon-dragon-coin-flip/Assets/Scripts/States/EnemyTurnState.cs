@@ -11,11 +11,7 @@ public class EnemyTurnState : State
     public override void Enter(int damage)
     {
         base.Enter();
-        //stateMachine.enemyTurnCanvasGroup.alpha = 1;
-        //stateMachine.enemyTurnCanvasGroup.interactable = true;
-        //stateMachine.enemyTurnCanvasGroup.blocksRaycasts = true;
 
-        Debug.Log($"EnemyTurnState damage={damage}");
         stateMachine.player.OnDamageReceived(damage);
 
         var enemyAttackBubble = stateMachine.enemy.gameObject.transform.GetChild(0).gameObject;
@@ -29,17 +25,7 @@ public class EnemyTurnState : State
         base.UpdateLogic();
         // TODO: animation or wait
 
-        
-
-        //stateMachine.ChangeState(stateMachine.playerChoiceState);
-    }
-
-    public override void Exit()
-    {
-        base.Exit();
-        stateMachine.enemyTurnCanvasGroup.alpha = 0;
-        stateMachine.enemyTurnCanvasGroup.interactable = false;
-        stateMachine.enemyTurnCanvasGroup.blocksRaycasts = false;
+        stateMachine.ChangeState(stateMachine.startTurnState);
     }
 
 }

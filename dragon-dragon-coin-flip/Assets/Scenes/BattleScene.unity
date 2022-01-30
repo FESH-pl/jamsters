@@ -1706,7 +1706,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c0122abbd6ff7b459795faf723c2dc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyGameObject: {fileID: 723977443}
   stateMachine: {fileID: 163198013}
   healthbar: {fileID: 723977447}
   maxHp: 150
@@ -2237,7 +2236,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -363, y: -7.0000076}
+  m_AnchoredPosition: {x: -363, y: -7}
   m_SizeDelta: {x: -560.2111, y: -400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1247425175
@@ -3685,7 +3684,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoinManager
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 1975580177140998907, guid: fe023bdab6f63614a925c1cb18afb7dd, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1975580177140998907, guid: fe023bdab6f63614a925c1cb18afb7dd, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: fe023bdab6f63614a925c1cb18afb7dd, type: 3}
 --- !u!1 &2126933797
 GameObject:

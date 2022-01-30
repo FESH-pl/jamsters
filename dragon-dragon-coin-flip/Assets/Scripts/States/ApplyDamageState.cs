@@ -9,9 +9,9 @@ public class ApplyDamageState : State
     public override void Enter(int damage)
     {
         base.Enter();
-        stateMachine.applyDamageCanvasGroup.alpha = 1;
-        stateMachine.applyDamageCanvasGroup.interactable = true;
-        stateMachine.applyDamageCanvasGroup.blocksRaycasts = true;
+        //stateMachine.applyDamageCanvasGroup.alpha = 1;
+        //stateMachine.applyDamageCanvasGroup.interactable = true;
+        //stateMachine.applyDamageCanvasGroup.blocksRaycasts = true;
 
         stateMachine.enemy.OnDamageReceived(damage);
     }
@@ -23,11 +23,11 @@ public class ApplyDamageState : State
         stateMachine.ChangeState(stateMachine.playerChoiceState);
     }
 
-    public override void Exit()
-    {
-        base.Exit();
-        stateMachine.applyDamageCanvasGroup.alpha = 0;
-        stateMachine.applyDamageCanvasGroup.interactable = false;
-        stateMachine.applyDamageCanvasGroup.blocksRaycasts = false;
-    }
+    //public override void Exit()
+    //{
+    //    base.Exit();
+    //    stateMachine.applyDamageCanvasGroup.alpha = 0;
+    //    stateMachine.applyDamageCanvasGroup.interactable = false;
+    //    stateMachine.applyDamageCanvasGroup.blocksRaycasts = false;
+    //}
 }
