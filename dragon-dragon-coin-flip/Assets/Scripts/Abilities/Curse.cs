@@ -4,6 +4,17 @@ using UnityEngine;
 
 public class Curse : Ability
 {
+
+    void Awake()
+    {
+        base.startCost = 1;
+        remainingCost = startCost;
+        elementType = Element.dark;
+        power = 3;
+
+        textBox.text = "Curse\n\nDeal " + power + " damage.\n+1 for each time used this combat.";
+    }
+
     public override bool activate(Coin coin)
     {
         CoinDetails coinDetails = CoinManager.Instance.GetCoinDetails(coin.coinID);
@@ -14,13 +25,11 @@ public class Curse : Ability
             if (remainingCost <= 0)
             {
                 resetCost();
-                if (target == Target.enemy)
-                {
-                    stateMachine.ChangeState(stateMachine.applyDamageState, power);
-                }
-
-                return true;
+                stateMachine.ChangeState(stateMachine.applyDamageState, power);
+                power++;
+                textBox.text = "Curse\n\nDeal " + power + " damage.\n+1 for each time used this combat.";
             }
+            return true;
         }
         else if (coin.sideUp == 2 && coinDetails.side2Element == elementType)
         {
@@ -28,12 +37,11 @@ public class Curse : Ability
             if (remainingCost <= 0)
             {
                 resetCost();
-                if (target == Target.enemy)
-                {
-                    stateMachine.ChangeState(stateMachine.applyDamageState, power);
-                }
-                return true;
+                stateMachine.ChangeState(stateMachine.applyDamageState, power);
+                power++;
+                textBox.text = "Curse\n\nDeal " + power + " damage.\n+1 for each time used this combat.";
             }
+            return true;
         }
 
         return false;

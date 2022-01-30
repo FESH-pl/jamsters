@@ -14,12 +14,8 @@ public class StickSmack : Ability
             if (remainingCost <= 0)
             {
                 resetCost();
-                if (target == Target.enemy)
-                {
-                    stateMachine.ChangeState(stateMachine.applyDamageState, power);
-                }
-
-                
+                stateMachine.ChangeState(stateMachine.applyDamageState, power);
+                power++;                
             }
             return true;
         }
@@ -29,11 +25,8 @@ public class StickSmack : Ability
             if (remainingCost <= 0)
             {
                 resetCost();
-                if (target == Target.enemy)
-                {
-                    stateMachine.ChangeState(stateMachine.applyDamageState, power);
-                }
-                
+                stateMachine.ChangeState(stateMachine.applyDamageState, power);
+                power++;
             }
             return true;
         }

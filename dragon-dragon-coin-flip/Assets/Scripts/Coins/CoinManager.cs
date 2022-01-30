@@ -80,7 +80,7 @@ public class CoinManager : MonoBehaviour
             pool.RemoveAt(randomCardPosition);
 
         }
-        PrintStatus();
+        //PrintStatus();
     }
 
     //call when turn ends to discard remaining coins in hand

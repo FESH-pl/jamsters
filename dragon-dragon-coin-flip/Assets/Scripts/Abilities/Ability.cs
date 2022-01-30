@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public abstract class Ability : MonoBehaviour
 {
@@ -8,8 +9,9 @@ public abstract class Ability : MonoBehaviour
     public int startCost;
     [HideInInspector] public int remainingCost;
     public Element elementType;
-    public Target target;
     public int power;
+
+    public Text textBox;
 
     public StateMachine stateMachine;
 
