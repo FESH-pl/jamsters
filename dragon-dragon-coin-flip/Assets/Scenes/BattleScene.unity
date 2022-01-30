@@ -1791,6 +1791,8 @@ MonoBehaviour:
   healthbarText: {fileID: 1086151048}
   maxHp: 150
   currentHp: 0
+  abilityNameText: {fileID: 868879516}
+  abilityDescriptionText: {fileID: 832635443}
 --- !u!1 &832635443
 GameObject:
   m_ObjectHideFlags: 0

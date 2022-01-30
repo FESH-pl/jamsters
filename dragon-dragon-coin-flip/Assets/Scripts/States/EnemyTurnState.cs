@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class EnemyTurnState : State
 {
-    public int enemyAttackDamage = 10;
-
     private GameObject playerHealthBar;
     private Vector3 initialEnemyPos;
     private float startTime;
@@ -21,6 +19,8 @@ public class EnemyTurnState : State
 
         playerHealthBar = stateMachine.player.gameObject.transform.parent.GetChild(2).gameObject;        
         initialEnemyPos = stateMachine.enemy.gameObject.transform.position;
+
+
 
     }
 
