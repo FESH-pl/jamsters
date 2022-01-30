@@ -6,3 +6,10 @@ public enum Element
     smoke,
     none
 }
+
+public enum Target
+{
+    player,
+    enemy,
+    other
+}

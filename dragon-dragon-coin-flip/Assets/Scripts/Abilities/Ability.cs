@@ -1,18 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Ability : MonoBehaviour
+public abstract class Ability : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    public int startCost;
+    [HideInInspector] public int remainingCost;
+    public Element elementType;
+    public int power;
+
+    public Text textBox;
+
+    public StateMachine stateMachine;
+
+    void Awake()
     {
-        
+        resetCost();
     }
 
-    // Update is called once per frame
-    void Update()
+    public abstract bool activate(Coin coin);
+
+    public void resetCost()
     {
-        
+        remainingCost = startCost;
     }
+
 }
