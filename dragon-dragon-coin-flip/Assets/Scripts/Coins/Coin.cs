@@ -55,7 +55,13 @@ public class Coin : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
             
             Debug.Log("FIRE!");
 
-            CoinManager.Instance.DiscardCoin(this.transform);
+            
+
+            if(eventData.pointerCurrentRaycast.gameObject.GetComponent<Ability>().activate(this)){
+                CoinManager.Instance.DiscardCoin(this.transform);
+            } else {
+                Debug.Log("Nope");
+            }
 
         }
 
