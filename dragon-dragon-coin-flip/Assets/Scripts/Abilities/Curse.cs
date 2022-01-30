@@ -12,7 +12,7 @@ public class Curse : Ability
         elementType = Element.dark;
         power = 3;
 
-        textBox.text = "Curse\n\nDeal " + power + " damage.\n+1 for each time used this combat.";
+        updateText();
     }
 
     public override bool activate(Coin coin)
@@ -27,7 +27,7 @@ public class Curse : Ability
                 resetCost();
                 stateMachine.ChangeState(stateMachine.applyDamageState, power);
                 power++;
-                textBox.text = "Curse\n\nDeal " + power + " damage.\n+1 for each time used this combat.";
+                updateText();
             }
             return true;
         }
@@ -39,11 +39,16 @@ public class Curse : Ability
                 resetCost();
                 stateMachine.ChangeState(stateMachine.applyDamageState, power);
                 power++;
-                textBox.text = "Curse\n\nDeal " + power + " damage.\n+1 for each time used this combat.";
+                updateText();
             }
             return true;
         }
 
         return false;
+    }
+
+    private void updateText()
+    {
+        textBox.text = "Curse\nCost: " + remainingCost + " Dark\nDeal " + power + " damage.\n+1 for each time used this combat.";
     }
 }

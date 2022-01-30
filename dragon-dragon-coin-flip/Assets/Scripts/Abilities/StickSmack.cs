@@ -15,7 +15,7 @@ public class StickSmack : Ability
             {
                 resetCost();
                 stateMachine.ChangeState(stateMachine.applyDamageState, power);
-                power++;                
+                //power++;                
             }
             return true;
         }
@@ -26,7 +26,7 @@ public class StickSmack : Ability
             {
                 resetCost();
                 stateMachine.ChangeState(stateMachine.applyDamageState, power);
-                power++;
+                //power++;
             }
             return true;
         }
