@@ -76,6 +76,11 @@ public class EnemyTurnState : State
         base.Exit();
         stateMachine.enemy.gameObject.transform.position = initialEnemyPos;
         playerHealthBar.transform.localRotation = Quaternion.Euler(0, 0, 0);
+        if (stateMachine.enemy.currentAbility.name == "Claw")
+        {
+            stateMachine.enemy.currentAbility.damage++;
+            stateMachine.enemy.currentAbility.description = $"Deal {stateMachine.enemy.currentAbility.damage} damage";
+        }
 
     }
 

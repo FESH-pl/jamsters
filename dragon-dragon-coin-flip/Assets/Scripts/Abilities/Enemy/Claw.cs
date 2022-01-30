@@ -5,9 +5,9 @@ using UnityEngine;
 public class Claw : EnemyAbility
 {
     public Claw() : base() {
-        name = "Claw";
-        description = "Deal 10 damage";
-        damage = 10;
+        damage = 8;
         heal = 0;
+        name = "Claw";
+        description = $"Deal {damage} damage";
     }
 }
