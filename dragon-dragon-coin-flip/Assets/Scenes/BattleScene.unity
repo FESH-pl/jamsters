@@ -1569,6 +1569,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c0122abbd6ff7b459795faf723c2dc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyGameObject: {fileID: 723977443}
   stateMachine: {fileID: 163198013}
   healthbar: {fileID: 723977447}
   maxHp: 150
@@ -2070,7 +2071,7 @@ GameObject:
   - component: {fileID: 1247425176}
   - component: {fileID: 1247425175}
   m_Layer: 5
-  m_Name: Attack Preview
+  m_Name: AttackPreview
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

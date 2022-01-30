@@ -17,8 +17,8 @@ public class PlayerChoiceState : State
     public override void Exit()
     {
         base.Exit();
-        stateMachine.playerChoiceCanvasGroup.alpha = 0;
-        stateMachine.playerChoiceCanvasGroup.interactable = false;
-        stateMachine.playerChoiceCanvasGroup.blocksRaycasts = false;
+        //stateMachine.playerChoiceCanvasGroup.alpha = 0;
+        //stateMachine.playerChoiceCanvasGroup.interactable = false;
+        //stateMachine.playerChoiceCanvasGroup.blocksRaycasts = false;
     }
 }
