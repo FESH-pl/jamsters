@@ -15,9 +15,6 @@ public class ApplyDamageState : State
         base.Enter();
         startTime = Time.time;
 
-        // TODO: add check for heal ability (negative damage)
-        
-
         if(damage > 0)
         {
             isHealing = false;
