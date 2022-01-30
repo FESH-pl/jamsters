@@ -22,7 +22,8 @@ public class Player : MonoBehaviour
 
     public void OnDamageReceived(int damage)
     {
-        Debug.Log($"Player OnDamageReceived damage={damage}");
+        // TODO: make sure hp doesn't exceed max
+
         currentHp -= damage;
 
         if (currentHp <= 0)

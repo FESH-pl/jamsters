@@ -6,40 +6,68 @@ using UnityEngine.UI;
 public class EnemyTurnState : State
 {
     public int enemyAttackDamage = 10;
+
+    private GameObject playerHealthBar;
+    private Vector3 initialEnemyPos;
+    private float startTime;
     public EnemyTurnState(StateMachine stateMachine) : base("EnemyTurnState", stateMachine) { }
 
     public override void Enter(int damage)
     {
         base.Enter();
-        //stateMachine.enemyTurnCanvasGroup.alpha = 1;
-        //stateMachine.enemyTurnCanvasGroup.interactable = true;
-        //stateMachine.enemyTurnCanvasGroup.blocksRaycasts = true;
+        startTime = Time.time;
 
-        Debug.Log($"EnemyTurnState damage={damage}");
         stateMachine.player.OnDamageReceived(damage);
 
-        var enemyAttackBubble = stateMachine.enemy.gameObject.transform.GetChild(0).gameObject;
-
-        // enemyAttackBubble.transform.Rotate(new Vector3(0, 0, 45));
+        playerHealthBar = stateMachine.player.gameObject.transform.parent.GetChild(2).gameObject;        
+        initialEnemyPos = stateMachine.enemy.gameObject.transform.position;
 
     }
 
     public override void UpdateLogic()
     {
         base.UpdateLogic();
-        // TODO: animation or wait
-
         
 
-        //stateMachine.ChangeState(stateMachine.playerChoiceState);
+        ShakeHealthBar();
+        MoveEnemy();
+
+
+        // TODO: refine length
+        var elapsedTime = Time.time - startTime;
+        if (elapsedTime > 1f) stateMachine.ChangeState(stateMachine.playerChoiceState);
+
+    }
+
+    private void MoveEnemy()
+    {
+        if (stateMachine.enemy.gameObject.transform.position.x > 1200)
+            stateMachine.enemy.gameObject.transform.position += new Vector3(-1, 0, 0);
+    }
+
+    private void ShakeHealthBar()
+    {
+        var angle = 2;
+        var speed = 50;
+        // https://answers.unity.com/questions/755687/is-there-a-way-to-shake-an-object-fast.html
+        float AngleAmount = (Mathf.Cos(Time.time * speed) * 180) / Mathf.PI * 0.5f;
+        AngleAmount = Mathf.Clamp(AngleAmount, -angle, angle);
+        playerHealthBar.transform.localRotation = Quaternion.Euler(0, 0, AngleAmount);
+    }
+
+    private void DrainHealth()
+    {
+        // todo: animate health going down instead of setting it
     }
 
     public override void Exit()
     {
         base.Exit();
-        stateMachine.enemyTurnCanvasGroup.alpha = 0;
-        stateMachine.enemyTurnCanvasGroup.interactable = false;
-        stateMachine.enemyTurnCanvasGroup.blocksRaycasts = false;
+        stateMachine.enemy.gameObject.transform.position = initialEnemyPos;
+        playerHealthBar.transform.localRotation = Quaternion.Euler(0, 0, 0);
+
     }
+
+
 
 }
