@@ -64,7 +64,6 @@ public class StateMachine : MonoBehaviour
 
     public void ChangeState(State newState, int? damage = null)
     {
-        Debug.Log($"StateMachine ChangeState damage={damage}");
         currentState.Exit();
         currentState = newState;
         if (damage == null) currentState.Enter();
