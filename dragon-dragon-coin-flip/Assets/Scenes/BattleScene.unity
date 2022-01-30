@@ -1215,8 +1215,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52f8495d28c959649b14db9592aff4c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 0
+  startCost: 0
+  remainingCost: 0
   elementType: 0
+  target: 0
+  power: 0
+  stateMachine: {fileID: 0}
 --- !u!1 &490054315
 GameObject:
   m_ObjectHideFlags: 0
@@ -1305,8 +1309,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52f8495d28c959649b14db9592aff4c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 0
+  startCost: 0
+  remainingCost: 0
   elementType: 0
+  target: 0
+  power: 0
+  stateMachine: {fileID: 0}
 --- !u!1 &530019734
 GameObject:
   m_ObjectHideFlags: 0
@@ -2395,8 +2403,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52f8495d28c959649b14db9592aff4c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 0
+  startCost: 1
+  remainingCost: 0
   elementType: 0
+  target: 1
+  power: 10
+  stateMachine: {fileID: 163198013}
 --- !u!1 &1294117518
 GameObject:
   m_ObjectHideFlags: 0
@@ -2416,7 +2428,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1294117519
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3128,8 +3140,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52f8495d28c959649b14db9592aff4c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 0
+  startCost: 0
+  remainingCost: 0
   elementType: 0
+  target: 0
+  power: 0
+  stateMachine: {fileID: 0}
 --- !u!1 &1798976849
 GameObject:
   m_ObjectHideFlags: 0

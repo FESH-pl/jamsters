@@ -53,7 +53,7 @@ public class Coin : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
 
         if(eventData.pointerCurrentRaycast.gameObject != null && eventData.pointerCurrentRaycast.gameObject.GetComponent<Ability>() != null){
             
-            Debug.Log("FIRE!");
+            //Debug.Log("FIRE!");
 
             
 
