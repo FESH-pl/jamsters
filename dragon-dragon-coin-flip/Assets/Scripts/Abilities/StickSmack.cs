@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class StickSmack : Ability
 {
+
+    void Awake()
+    {
+        textBox.text = "Stick Smack\nCost: 1 Neutral\n\nDeal 5 damage.";
+    }
+
     public override bool activate(Coin coin)
     {
         CoinDetails coinDetails = CoinManager.Instance.GetCoinDetails(coin.coinID);
