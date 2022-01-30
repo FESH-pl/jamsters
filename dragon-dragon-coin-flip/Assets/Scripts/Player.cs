@@ -31,5 +31,6 @@ public class Player : MonoBehaviour
 
         if (currentHp <= 0)
             stateMachine.ChangeState(stateMachine.loseState);
+        if (currentHp > maxHp) currentHp = maxHp;
     }
 }

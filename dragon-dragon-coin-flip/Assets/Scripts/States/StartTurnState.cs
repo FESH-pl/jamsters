@@ -15,6 +15,8 @@ public class StartTurnState : State
 
         CoinManager.Instance.DiscardHand();
         CoinManager.Instance.DrawHand();
+
+        stateMachine.enemy.SetNewEnemyAbility();
     }
     public override void UpdateLogic()
     {
