@@ -4,12 +4,13 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class Coin : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class Coin : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler
 {
 
     public int coinID;
     public int sideUp = 1; 
     private Image image;
+    public Image toolTip;
 
     //This variable is only used when draging the coin.
     private Transform parent;
@@ -29,10 +30,20 @@ public class Coin : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
                 image.sprite = coinDetails.side2Sprite;
             }
         }
+
+        toolTip.transform.GetChild(1).GetComponent<Image>().sprite = coinDetails.side1Sprite;
+        toolTip.transform.GetChild(2).GetComponent<Image>().sprite = coinDetails.side2Sprite;
     }
 
     public void flip(){
         sideUp = Random.Range(1,3);
+        setCoinSprite();
+    }
+
+    public void flipOver()
+    {
+        if (sideUp == 1) sideUp = 2; else sideUp = 1;
+
         setCoinSprite();
     }
 
@@ -66,5 +77,17 @@ public class Coin : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
         }
 
         this.GetComponent<Image>().raycastTarget = true;
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        toolTip.gameObject.SetActive(true);
+
+        
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        toolTip.gameObject.SetActive(false);
     }
 }
