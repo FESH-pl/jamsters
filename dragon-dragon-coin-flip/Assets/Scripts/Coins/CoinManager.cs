@@ -17,6 +17,8 @@ public class CoinManager : MonoBehaviour
     private List<Transform> discard;
     private List<Transform> exhaust;
 
+    private bool setupBool = false;
+
     [SerializeField] private SO_CoinList coinList = null;
 
     void Awake(){
@@ -37,6 +39,17 @@ public class CoinManager : MonoBehaviour
 
         foreach(GameObject coin in startingPool){
             pool.Add(Instantiate(coin.transform));
+        }
+
+    }
+
+    void Update()
+    {
+        if (!setupBool)
+        {
+            setupBool = true;
+            CoinManager.Instance.DiscardHand();
+            CoinManager.Instance.DrawHand();
         }
     }
 
@@ -110,7 +123,7 @@ public class CoinManager : MonoBehaviour
     public void DiscardCoin(Transform coin){
         coin.SetParent(null);
         discard.Add(coin);
-        PrintStatus();
+        //PrintStatus();
     }
 
     private void PrintStatus(){

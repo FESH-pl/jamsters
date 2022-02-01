@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
@@ -42,7 +43,10 @@ public class Enemy : MonoBehaviour
     {
         currentHp -= damage;
         if (currentHp <= 0)
-            stateMachine.ChangeState(stateMachine.victoryState);
+        {
+            //stateMachine.ChangeState(stateMachine.victoryState);
+            SceneManager.LoadScene("WinComicScene", LoadSceneMode.Single);
+        }
         if (currentHp > maxHp) currentHp = maxHp;
     }
 

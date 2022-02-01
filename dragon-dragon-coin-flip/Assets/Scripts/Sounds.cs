@@ -31,11 +31,16 @@ public class Sounds : MonoBehaviour
         }
 
         source = gameObject.GetComponent<AudioSource>();
+        source.volume = 0f;
     }
 
     void Update()
     {
         timeSinceLastSound += Time.deltaTime;
+        if(source.volume < 1f)
+        {
+            source.volume += Time.deltaTime / 4;
+        }
         if (soundPlayed)
         {
             soundPlayed = false;

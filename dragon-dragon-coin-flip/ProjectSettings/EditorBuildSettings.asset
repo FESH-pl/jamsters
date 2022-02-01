@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BattleScene.unity
     guid: 13432a84610778d48a7044b61f47b731
+  - enabled: 1
+    path: Assets/Scenes/WinComicScene.unity
+    guid: bdf3e9d6a9bbdd142b2bf32d2187c86b
   m_configObjects: {}
