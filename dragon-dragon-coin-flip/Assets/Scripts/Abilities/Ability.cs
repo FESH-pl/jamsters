@@ -12,6 +12,8 @@ public abstract class Ability : MonoBehaviour
     public int power;
 
     public Text textBox;
+    public AudioSource source;
+
 
     public StateMachine stateMachine;
 
@@ -26,5 +28,4 @@ public abstract class Ability : MonoBehaviour
     {
         remainingCost = startCost;
     }
-
 }

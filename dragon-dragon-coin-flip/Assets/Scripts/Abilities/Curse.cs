@@ -29,6 +29,7 @@ public class Curse : Ability
                 power++;
                 updateText();
             }
+            Sounds.Instance.playAttackSound();
             return true;
         }
         else if (coin.sideUp == 2 && coinDetails.side2Element == elementType)
@@ -41,6 +42,7 @@ public class Curse : Ability
                 power++;
                 updateText();
             }
+            Sounds.Instance.playAttackSound();
             return true;
         }
 

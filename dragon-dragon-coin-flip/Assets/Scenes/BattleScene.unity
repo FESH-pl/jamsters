@@ -1317,6 +1317,7 @@ MonoBehaviour:
   elementType: 0
   power: 0
   textBox: {fileID: 51011226}
+  source: {fileID: 0}
   stateMachine: {fileID: 163198013}
 --- !u!1 &490054315
 GameObject:
@@ -1412,6 +1413,7 @@ MonoBehaviour:
   elementType: 0
   power: 0
   textBox: {fileID: 1870014387}
+  source: {fileID: 0}
   stateMachine: {fileID: 163198013}
 --- !u!1 &530019734
 GameObject:
@@ -2669,6 +2671,7 @@ MonoBehaviour:
   elementType: 0
   power: 5
   textBox: {fileID: 1983874429}
+  source: {fileID: 0}
   stateMachine: {fileID: 163198013}
 --- !u!1 &1294117518
 GameObject:
@@ -3419,6 +3422,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1637734810}
   - component: {fileID: 1637734809}
+  - component: {fileID: 1637734811}
   m_Layer: 0
   m_Name: BackgroundMusic
   m_TagString: Untagged
@@ -3536,6 +3540,44 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1637734811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637734808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c38cc6ca3df18e4f9551699d7b547b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackAudio:
+  - {fileID: 8300000, guid: 3a6a03935f7b03a4cb36de9d19dff3a9, type: 3}
+  - {fileID: 8300000, guid: b57521bf5bb5f9f499372b5a2ad1fd23, type: 3}
+  - {fileID: 8300000, guid: 0767d38e0c09a7d4f9529b9a08b5fde6, type: 3}
+  - {fileID: 8300000, guid: 1cb3871831a3ec04c8575ad7bb2d2ad3, type: 3}
+  hurtAudio:
+  - {fileID: 8300000, guid: f77de1c86257e9346a1d3784ac6fa7d4, type: 3}
+  - {fileID: 8300000, guid: b9d54e00fa631ab40a3b244bd9bd5bfb, type: 3}
+  - {fileID: 8300000, guid: 0d7b48303c0c8944688817fef5cd52ff, type: 3}
+  - {fileID: 8300000, guid: 225250bfecac6d6488a3fbf9cf8bb0a0, type: 3}
+  - {fileID: 8300000, guid: 93e447a197f527a4692ed1cae95d13fd, type: 3}
+  - {fileID: 8300000, guid: 48d705b8a40db18439d7f9a2b4801038, type: 3}
+  - {fileID: 8300000, guid: 2d8411c4125e983418e169a5be6b5f92, type: 3}
+  enemyTaunts:
+  - {fileID: 8300000, guid: 52726f3b616df204b8649bf98f78db89, type: 3}
+  - {fileID: 8300000, guid: 8a947f1f613b58d4499b660e153d7143, type: 3}
+  coinSounds:
+  - {fileID: 8300000, guid: 9dd5eaa4daf6ce1489e4c600a1a152b5, type: 3}
+  - {fileID: 8300000, guid: 6bed19107f8e4de49955bfa6471fa168, type: 3}
+  - {fileID: 8300000, guid: dc4baaf050e391549b6ce2f85ceb9f6b, type: 3}
+  - {fileID: 8300000, guid: 66dcca99bc090c048bc643be1d1bf0d3, type: 3}
+  - {fileID: 8300000, guid: a60bd99a2a2ad9b42aa4aa3179e5972f, type: 3}
+  enemyHurt:
+  - {fileID: 8300000, guid: c9645eb7b82a37245a461d03ef521f63, type: 3}
+  - {fileID: 8300000, guid: 3e56b2b682c592a4ba07938566d9102e, type: 3}
+  - {fileID: 8300000, guid: ab1d789e18df8d246a31a33f18d91fd7, type: 3}
 --- !u!1 &1641458957
 GameObject:
   m_ObjectHideFlags: 0
@@ -3630,6 +3672,7 @@ MonoBehaviour:
   elementType: 0
   power: 0
   textBox: {fileID: 1356648693}
+  source: {fileID: 0}
   stateMachine: {fileID: 163198013}
   hand: {fileID: 2037835302}
 --- !u!1 &1798976849

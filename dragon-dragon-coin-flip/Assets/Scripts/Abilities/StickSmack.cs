@@ -23,6 +23,7 @@ public class StickSmack : Ability
                 stateMachine.ChangeState(stateMachine.applyDamageState, power);
                 //power++;                
             }
+            Sounds.Instance.playAttackSound();
             return true;
         }
         else if (coin.sideUp == 2 && coinDetails.side2Element == elementType)
@@ -34,6 +35,7 @@ public class StickSmack : Ability
                 stateMachine.ChangeState(stateMachine.applyDamageState, power);
                 //power++;
             }
+            Sounds.Instance.playAttackSound();
             return true;
         }
 

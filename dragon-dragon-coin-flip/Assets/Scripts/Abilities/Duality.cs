@@ -37,6 +37,7 @@ public class Duality : Ability
                 {
                     stateMachine.ChangeState(stateMachine.applyDamageState, power);
                     stateMachine.ChangeState(stateMachine.applyDamageState, -power);
+                    Sounds.Instance.playAttackSound();
                     resetCost2();
                 }
                 
@@ -55,12 +56,14 @@ public class Duality : Ability
                 {
                     stateMachine.ChangeState(stateMachine.applyDamageState, power);
                     stateMachine.ChangeState(stateMachine.applyDamageState, -power);
+                    Sounds.Instance.playAttackSound();
                     resetCost2();
                 }
 
                 
             }
             updateText();
+            
             return true;
         }
         else if (coin.sideUp == 2 && coinDetails.side2Element == elementType && remainingCost > 0)
@@ -73,11 +76,13 @@ public class Duality : Ability
                 {
                     stateMachine.ChangeState(stateMachine.applyDamageState, power);
                     stateMachine.ChangeState(stateMachine.applyDamageState, -power);
+                    Sounds.Instance.playAttackSound();
                     resetCost2();
                 }
                 
             }
             updateText();
+            
             return true;
         } else if (coin.sideUp == 2 && coinDetails.side2Element == elementType2 && remainingCost2 > 0)
         {
@@ -89,6 +94,7 @@ public class Duality : Ability
                 {
                     stateMachine.ChangeState(stateMachine.applyDamageState, power);
                     stateMachine.ChangeState(stateMachine.applyDamageState, -power);
+                    Sounds.Instance.playAttackSound();
                     resetCost2();
                 }
 
@@ -97,9 +103,6 @@ public class Duality : Ability
             updateText();
             return true;
         }
-
-
-
         return false;
     }
 

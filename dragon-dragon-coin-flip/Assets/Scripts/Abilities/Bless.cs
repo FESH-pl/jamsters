@@ -32,6 +32,7 @@ public class Bless : Ability
                     if(handslot.childCount > 0)
                     {
                         handslot.GetChild(0).GetComponent<Coin>().flipOver();
+                        Sounds.Instance.playCoinSound();
                     }
                 }
             }
@@ -51,10 +52,12 @@ public class Bless : Ability
                     if (handslot.childCount > 0)
                     {
                         handslot.GetChild(0).GetComponent<Coin>().flipOver();
+                        Sounds.Instance.playCoinSound();
                     }
                 }
             }
             updateText();
+            
             return true;
         }
 
